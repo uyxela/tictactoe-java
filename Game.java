@@ -22,7 +22,7 @@ public class Game {
   // Scanner object used in the class
   private Scanner sc = new Scanner(System.in);
 
-  // Board object to manage board started
+  // Board object to manage board state
   Board board = new Board();
 
   // AI player object
