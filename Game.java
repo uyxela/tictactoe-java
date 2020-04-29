@@ -159,7 +159,7 @@ public class Game {
       row = sc.nextInt() - 1;
       System.out.println("Enter the column number of your move:");
       column = sc.nextInt() - 1;
-    } while (board.getCell(row, column) != ' ' && board.valid(row, column));
+    } while (!board.valid(row, column) || board.getCell(row, column) != ' ');
 
     // Print out player one's move
     board.nextMove(row, column, 'X');
@@ -187,7 +187,7 @@ public class Game {
         row = sc.nextInt() - 1;
         System.out.println("Enter the column number of your move:");
         column = sc.nextInt() - 1;
-      } while (board.getCell(row, column) != ' ' && board.valid(row, column));
+      } while (!board.valid(row, column) || board.getCell(row, column) != ' ');
 
       // Print out player two's move
       board.nextMove(row, column, 'O');
@@ -216,7 +216,7 @@ public class Game {
     // Print this message if the AI has won
     else if (winner.equals("AI")) {
       System.out.println("You lost!");
-      System.out.println("Unfortuantely, you don't win anything");
+      System.out.println("Unfortuantely, you don't win anything :(");
       System.out.println("Thanks for playing, better luck next time!");
     } 
     // Print this message for the winning player

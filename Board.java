@@ -48,6 +48,7 @@ public class Board {
     if (row >= 0 && row <= 2 && column >= 0 && column <= 2) {
       return true;
     }
+    System.out.println("Please enter a valid input!");
     return false;
   }
 }

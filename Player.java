@@ -1,7 +1,8 @@
 // Class for the AI player
 // The AI player uses the minimax algorithm to decide on the best next move
 
-// Explain minimax
+// Minimax is a decision rule used in artificial intelligence, decision theory, game theory, statistics, and philosophy for minimizing the possible loss for a worst case (maximum loss) scenario. When dealing with gains, it is referred to as "maximin"—to maximize the minimum gain. Originally formulated for two-player zero-sum game theory, covering both the cases where players take alternate moves and those where they make simultaneous moves, it has also been extended to more complex games and to general decision-making in the presence of uncertainty.
+// Minimax. (2020, April 17). Retrieved April 29, 2020, from https://en.wikipedia.org/wiki/Minimax
 public class Player {
 
   int minimax(Board board, int depth, boolean isMax) {
@@ -111,9 +112,7 @@ public class Player {
     bestMove.row = -1;
     bestMove.column = -1;
 
-    // Traverse all cells, evaluate minimax function
-    // for all empty cells. And return the cell
-    // with optimal value.
+    // Find and return cell with the best score
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
         // Check if cell is empty
